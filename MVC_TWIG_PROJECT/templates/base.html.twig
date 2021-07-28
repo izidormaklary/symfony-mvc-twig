@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
+<html class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+              integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+              crossorigin="anonymous">
+        {# {{ encore_entry_link_tags('app') }} #}
+    {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block javascripts %}
+
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body class="d-flex flex-column h-100 ">
+<div class="row">
+    <aside class="">
+        <ul class="flex-column position-sticky top-0 sticky-top">
+            {% block menu %}
+                <li>
+                    <a href="/">Homepage</a>
+                </li>
+                <li>
+                    <a href="/about-{{ name }}">About me</a>
+                </li>
+            {% endblock %}
+        </ul>
+    </aside>
+
+    {% block body %}{% endblock %}
+</div>
+<footer class="footer mt-auto py-3 bg-dark">
+    <div class="container text-center">
+        <span class="text-light "> © Becode</span>
+    </div>
+
+</footer>
+</body>
+
 </html>

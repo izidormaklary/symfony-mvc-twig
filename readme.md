@@ -12,14 +12,25 @@ Symfony assignments tackled in a single a repo.
      Learn the basics of twig
 ### Steps:
 
-1. [ ] Install Symfony
-2. [ ] Use the MVC
-3. [ ] Functionality: 
+1. [x] Install Symfony
+2. [x] Use the MVC
+3. [x] Functionality: 
     * Showing name
     * Changing name
-4. [ ] About me page
-5. [ ] Change name of the route /about-{name}
+4. [x] About me page
+5. [x] Change name of the route /about-{name}
 
 ## 2. Twig
 
-_Coming soon..._
+### Learning objectives: 
+      Formatting html templates
+
+### Must have features:
+
+* [x] Footer
+* [x] Menu (todo: about me page should extend the block)
+* [ ] About me page: 
+   * displaying the Date in 3 different formats inside the menu
+   * formatting should happen inside the twig file
+* [ ] Homepage : Showing the name Capitalized
+* [ ] Creating a custom twig helper
