@@ -1,0 +1,5 @@
+MVC_TWIG_PROJECT/.env.local
+MVC_TWIG_PROJECT/.env.test
+.idea
+.DS_Store
+MVC_TWIG_PROJECT/vendor

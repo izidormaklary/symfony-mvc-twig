@@ -28,9 +28,41 @@ Symfony assignments tackled in a single a repo.
 ### Must have features:
 
 * [x] Footer
-* [x] Menu (todo: about me page should extend the block)
-* [ ] About me page: 
+* [x] Menu
+* [x] About me page: 
    * displaying the Date in 3 different formats inside the menu
    * formatting should happen inside the twig file
 * [ ] Homepage : Showing the name Capitalized
 * [ ] Creating a custom twig helper
+
+
+## Getting started
+
+_if you want to run the project locally..._
+
+Requirements: 
+    - have composer installed
+    - have symfony installed
+
+1. in the project folder (MVC_TWIG_PROJECT/) run the composer installation
+
+```bash
+composer install
+```
+
+2. edit the .env file inside the project folder
+
+```
+# fill in your database connection
+DATABASE_URL="mysql://userName:password@127.0.0.1:3306/databaseName?serverVersion=5.7"
+# you can decide between running it in production or developement mode
+APP_ENV=prod/dev 
+```
+
+3. you are ready to host it!
+    * set up your own localhost
+    * or run the following command in the project folder
+
+```bash
+symfony serve
+```

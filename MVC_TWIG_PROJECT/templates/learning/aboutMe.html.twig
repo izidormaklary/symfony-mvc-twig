@@ -2,6 +2,7 @@
 
 {% block title %}About me{% endblock %}
 {% block menu %}
+{{ parent() }}
     <li>
         <span>Europe: {{ date|format_date(pattern="d/M/Y") }}</span>
     </li>
