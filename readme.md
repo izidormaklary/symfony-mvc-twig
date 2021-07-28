@@ -66,4 +66,3 @@ APP_ENV=prod/dev
 ```bash
 symfony serve
 ```
-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
