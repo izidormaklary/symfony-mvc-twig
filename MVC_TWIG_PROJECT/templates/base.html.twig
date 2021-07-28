@@ -18,21 +18,24 @@
     {% endblock %}
 </head>
 <body class="d-flex flex-column h-100 ">
-<div class="row">
-    <aside class="">
-        <ul class="flex-column position-sticky top-0 sticky-top">
-            {% block menu %}
-                <li>
-                    <a href="/">Homepage</a>
-                </li>
-                <li>
-                    <a href="/about-{{ name }}">About me</a>
-                </li>
-            {% endblock %}
-        </ul>
-    </aside>
+<div class="container">
+    <div class="row">
 
-    {% block body %}{% endblock %}
+        <aside class="col-sm-4 col-md-3 mt-3">
+            <ul class="nav flex-column  sticky-top">
+                {% block menu %}
+                    <li class="nav-item">
+                        <a href="/">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about-{{ name }}">About me</a>
+                    </li>
+                {% endblock %}
+            </ul>
+        </aside>
+
+        {% block body %}{% endblock %}
+    </div>
 </div>
 <footer class="footer mt-auto py-3 bg-dark">
     <div class="container text-center">

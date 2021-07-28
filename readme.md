@@ -32,8 +32,8 @@ Symfony assignments tackled in a single a repo.
 * [x] About me page: 
    * displaying the Date in 3 different formats inside the menu
    * formatting should happen inside the twig file
-* [ ] Homepage : Showing the name Capitalized
-* [ ] Creating a custom twig helper
+* [x] Homepage : Showing the name Capitalized
+* [x] Creating a custom twig helper
 
 
 ## Getting started
@@ -41,8 +41,8 @@ Symfony assignments tackled in a single a repo.
 _if you want to run the project locally..._
 
 Requirements: 
-    - have composer installed
-    - have symfony installed
+    * have composer installed
+    * have symfony installed
 
 1. in the project folder (MVC_TWIG_PROJECT/) run the composer installation
 
@@ -66,3 +66,4 @@ APP_ENV=prod/dev
 ```bash
 symfony serve
 ```
+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
