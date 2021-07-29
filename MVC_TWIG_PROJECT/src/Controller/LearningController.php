@@ -80,6 +80,13 @@ class LearningController extends AbstractController
      */
     public function aboutMe(string $name){
 
+        if(!$name){
+
+            return $this->forward($this->showMyName,[
+                'name' => $name
+            ]);
+        }
+
         return $this->render('learning/aboutMe.html.twig', [
             'date'=> date("Y/m/d"),
             'name' => $name

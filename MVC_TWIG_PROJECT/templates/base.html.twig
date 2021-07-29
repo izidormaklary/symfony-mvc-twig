@@ -22,13 +22,13 @@
     <div class="row">
 
         <aside class="col-sm-4 col-md-3 mt-3">
-            <ul class="nav flex-column  sticky-top">
+            <ul class="nav flex-column sticky-top">
                 {% block menu %}
                     <li class="nav-item">
-                        <a href="/">Homepage</a>
+                        <a href="{{ path( 'show-my-name') }}">Homepage</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/about-{{ name }}">About me</a>
+                        <a href="{{ path( 'change-name', { 'name' : name}) }}">About me</a>
                     </li>
                 {% endblock %}
             </ul>

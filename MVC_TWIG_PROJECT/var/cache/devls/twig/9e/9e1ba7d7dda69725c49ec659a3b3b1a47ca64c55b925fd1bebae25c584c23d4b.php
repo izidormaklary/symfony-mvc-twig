@@ -66,7 +66,7 @@ class __TwigTemplate_05e96e587bdd2690fd190ad1a3a9d05fffd4a82bbec0f687164aa84e92b
     <div class=\"row\">
 
         <aside class=\"col-sm-4 col-md-3 mt-3\">
-            <ul class=\"nav flex-column  sticky-top\">
+            <ul class=\"nav flex-column sticky-top\">
                 ";
         // line 26
         $this->displayBlock('menu', $context, $blocks);
@@ -153,12 +153,15 @@ class __TwigTemplate_05e96e587bdd2690fd190ad1a3a9d05fffd4a82bbec0f687164aa84e92b
 
         // line 27
         echo "                    <li class=\"nav-item\">
-                        <a href=\"/\">Homepage</a>
+                        <a href=\"";
+        // line 28
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show-my-name");
+        echo "\">Homepage</a>
                     </li>
                     <li class=\"nav-item\">
-                        <a href=\"/about-";
+                        <a href=\"";
         // line 31
-        echo twig_escape_filter($this->env, (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 31, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change-name", ["name" => (isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 31, $this->source); })())]), "html", null, true);
         echo "\">About me</a>
                     </li>
                 ";
@@ -186,7 +189,7 @@ class __TwigTemplate_05e96e587bdd2690fd190ad1a3a9d05fffd4a82bbec0f687164aa84e92b
 
     public function getDebugInfo()
     {
-        return array (  171 => 37,  161 => 31,  155 => 27,  148 => 26,  141 => 18,  138 => 16,  131 => 15,  124 => 13,  119 => 9,  112 => 8,  99 => 5,  81 => 38,  79 => 37,  74 => 34,  72 => 26,  63 => 19,  61 => 15,  58 => 14,  55 => 8,  51 => 5,  45 => 1,);
+        return array (  174 => 37,  164 => 31,  158 => 28,  155 => 27,  148 => 26,  141 => 18,  138 => 16,  131 => 15,  124 => 13,  119 => 9,  112 => 8,  99 => 5,  81 => 38,  79 => 37,  74 => 34,  72 => 26,  63 => 19,  61 => 15,  58 => 14,  55 => 8,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -215,13 +218,13 @@ class __TwigTemplate_05e96e587bdd2690fd190ad1a3a9d05fffd4a82bbec0f687164aa84e92b
     <div class=\"row\">
 
         <aside class=\"col-sm-4 col-md-3 mt-3\">
-            <ul class=\"nav flex-column  sticky-top\">
+            <ul class=\"nav flex-column sticky-top\">
                 {% block menu %}
                     <li class=\"nav-item\">
-                        <a href=\"/\">Homepage</a>
+                        <a href=\"{{ path( 'show-my-name') }}\">Homepage</a>
                     </li>
                     <li class=\"nav-item\">
-                        <a href=\"/about-{{ name }}\">About me</a>
+                        <a href=\"{{ path( 'change-name', { 'name' : name}) }}\">About me</a>
                     </li>
                 {% endblock %}
             </ul>
